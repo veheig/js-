@@ -22,7 +22,7 @@ button.addEventListener("click", function (e) {
 
   swearWords.forEach((word) => {
     if (text.includes(word)) {
-      text = text.replaceAll(word, "***");
+      text = text.replaceAll(word, "*".repeat(word.length));
     }
   });
 
@@ -35,3 +35,4 @@ button.addEventListener("click", function (e) {
 // logic: i type in a sentence, and submit it.
 // it displays the submitted sentence and clear the inside of the input. and
 // if the submitted sentence has a swearword,it censors it
+// make sure the censored word is the same lenth with the swear word typed
